@@ -1,0 +1,73 @@
+
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f9;
+    color: #222;
+}
+
+/* Main content container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* CSS Grid multi-column layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Content cards */
+.card {
+    min-width: 0;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #294c70;
+    border-radius: 8px;
+}
+
+/* Images and other wide content */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablet layout: 768px and wider */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+/* Mobile layout: 320px and wider */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
